@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB Lion Coin (ABL) Whitepaper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #9C27B0;
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
+
+        .container {
+            padding: 40px;
+            background-color: #333;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .content {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .content h2 {
+            color: #9C27B0;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #9C27B0;
+            margin: 20px 0;
+        }
+
+        .section-content {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        .roadmap ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1em;
+        }
+
+        .roadmap ul li {
+            background: #444;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .timer {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #9C27B0;
+        }
+
+        .timer span {
+            font-size: 1.5em;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #888;
+        }
+
+        .highlight {
+            color: #9C27B0;
+            font-weight: bold;
+        }
+
+        /* Columns layout */
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 250px;
+            max-width: 550px;
+        }
+
+        /* Countdown animation */
+        @keyframes countdownAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .timer {
+            animation: countdownAnimation 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AB Lion Coin (ABL) Whitepaper</h1>
+
+    <div class="container">
+        <div class="content">
+            <h2>Introduction</h2>
+            <p>AB Lion Coin (ABL) is a next-generation cryptocurrency token designed for the future of digital finance. Built on the TON Network, ABL aims to provide a fast, secure, and decentralized platform for users to participate in a growing ecosystem. The token distribution will be initially driven by a series of airdrops, giving early adopters the opportunity to become part of this exciting journey.</p>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h3 class="section-title">Tokenomics</h3>
+                <div class="section-content">
+                    <p><strong>Token Name:</strong> AB Lion Coin</p>
+                    <p><strong>Token Symbol:</strong> ABL</p>
+                    <p><strong>Total Supply:</strong> 10,000,000,000,000,000,000,000 ABL</p>
+                    <p><strong>Initial Distribution:</strong> 100% will be distributed via airdrop. There will be no private or pre-sale.</p>
+                    <p><strong>Platform:</strong> TON Network</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3 class="section-title">Key Features</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>Fast and secure transactions.</li>
+                        <li>Decentralized and community-driven.</li>
+                        <li>Initial distribution via airdrop to allow widespread adoption.</li>
+                        <li>Future plans for staking, governance, and ecosystem development.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column">
+                <h3 class="section-title">Roadmap</h3>
+                <div class="roadmap">
+                    <ul>
+                        <li>AB Coin Bot Launch - Completed</li>
+                        <li>AB Lion Bot Launch - Completed</li>
+                        <li>Airdrop User Selection - Ongoing</li>
+                        <li>Staking System Integration - Upcoming</li>
+                        <li>Final Airdrop Distribution - June 1, 2025</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <h3 class="section-title">Get Involved</h3>
+                <div class="section-content">
+                    <p>The Airdrop for AB Lion Coin will take place on <span class="highlight">June 1, 2025</span>. To participate, users will need to complete the necessary steps for the airdrop selection, such as joining the official Telegram and following social media accounts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer">
+            <p>Time Remaining Until Airdrop:</p>
+            <p id="countdown"></p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 AB Lion Coin. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Countdown Timer for June 1, 2025
+        const countdownDate = new Date("June 1, 2025 00:00:00").getTime();
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "Airdrop Started!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
